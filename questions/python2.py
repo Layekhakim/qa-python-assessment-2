@@ -30,8 +30,15 @@
 # <HINT>
 # How does a for loop iterate through a string?
 
-def one(string):
-    return ""
+def one(input):
+	temp = input.split()
+
+	_list = []
+
+	for i in range(len(input)):
+		_list.append(input[i]*3)
+
+	return "".join(_list)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -51,8 +58,12 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 
-def two(number):
-    return False
+def two(input):
+	for i in range(2,input+1):
+		if i == input:
+			return True
+		elif input%i == 0:
+			return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +83,15 @@ def two(number):
 
 
 def three(a):
-    return 1
+	sum = 0
+
+	for i in range(1,5):
+		temp = str(a)*i
+		print(temp)
+		sum = sum + int(temp)
+	
+	return sum
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -103,8 +122,13 @@ def three(a):
     # How would you seperate a string into characters?
 
 
-def four(string1, string2):
-    return ""
+def four(input1, input2):
+	appendlist = []
+
+	for i in range(len(input1)):
+		appendlist.append(input1[i])
+		appendlist.append(input2[i])
+	return "".join(appendlist)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -124,7 +148,8 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    pass
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -145,8 +170,12 @@ def five():
     # There are no hints for this question.
 
 
-def six(string):
-    return False
+def six(input):
+    temp=input.lower()
+    if temp.endswith("py"):
+        return True
+    elif temp.endswith(""):
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -172,8 +201,8 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 
-def seven(a, b, c):
-    return False
+
+	
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
